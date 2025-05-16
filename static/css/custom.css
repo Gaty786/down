@@ -1,0 +1,172 @@
+/* Custom styles for Video Downloader */
+
+/* Header styles */
+.app-header {
+    background-image: url('https://pixabay.com/get/gfb3d56eb36955e77047612253f23bf2b5ae98b5a9e58b4083036c31b52879b43fbcf640e9a6a36fcae03c096955109d3d392780624dcf96d5870dd602d545675_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    padding: 3rem 0;
+}
+
+.app-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 17, 23, 0.7);
+}
+
+.app-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Video player card */
+.video-player-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #2d333b;
+}
+
+.video-interface {
+    background-image: url('https://pixabay.com/get/gd8b36f312f1240f741f6591cf7dbe04fc901a37fb91fbf6d3373e2ecafa457a6fa9342b21d3c9adb3ed9d7c6ba3dc7a9f2532571604e132ce7985e94f0d43a64_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-interface::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.play-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-icon:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Form enhancements */
+.url-input-wrapper {
+    position: relative;
+}
+
+.url-input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.url-input {
+    padding-left: 40px;
+    border-radius: 8px;
+}
+
+/* Download button */
+.download-btn {
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Progress styling */
+.progress {
+    height: 12px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Download list styling */
+.downloads-card {
+    border: 1px solid #2d333b;
+    border-radius: 8px;
+}
+
+.downloads-card .card-header {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app-header {
+        padding: 2rem 0;
+    }
+    
+    .video-interface {
+        height: 150px;
+    }
+}
+
+/* Card Animations */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Download icon animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.download-icon {
+    background-image: url('https://pixabay.com/get/g059f2c4fdb9b0bb30ff37d5af93d00e337ddb7c79475892d99c549ed8f097a365e74782b8696ef26d6c5cb3bf350488a59ed9166475251db8781bc96da675d8a_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Toast notifications */
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+}
